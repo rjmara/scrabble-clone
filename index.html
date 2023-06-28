@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Scrabble Game</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div id="wrapper">
+      <h2>Scrabble Game!</h2>
+      <img
+        src="./assets/graphics_data/Scrabble_Board_OneLine.png"
+        alt="scrabble board"
+      />
+      <img
+        class="tiles draggable"
+        src="./assets/scrabble_tiles/Scrabble_Tile_A.jpg"
+        alt="scrabble tile A"
+      />
+      <img
+        class="tiles draggable"
+        src="./assets/scrabble_tiles/Scrabble_Tile_B.jpg"
+        alt="scrabble tile A"
+      />
+      <img
+        id="tileHolder"
+        src="./assets/graphics_data/scrabble-tile-holder-406774_640.png"
+        alt="tile holder"
+      />
+    </div>
+
+    <div class="droppable ui-widget-header">
+      <p>Drop here</p>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.0/dist/jquery.validate.js"></script>
+    <link
+      href=" https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
