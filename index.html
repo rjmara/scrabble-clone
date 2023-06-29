@@ -7,31 +7,42 @@
   </head>
   <body>
     <div id="wrapper">
-      <h2>Scrabble Game!</h2>
-      <img
-        src="./assets/graphics_data/Scrabble_Board_OneLine.png"
-        alt="scrabble board"
-      />
-      <img
-        class="tiles draggable"
-        src="./assets/scrabble_tiles/Scrabble_Tile_A.jpg"
-        alt="scrabble tile A"
-      />
-      <img
-        class="tiles draggable"
-        src="./assets/scrabble_tiles/Scrabble_Tile_B.jpg"
-        alt="scrabble tile A"
-      />
-      <img
-        id="tileHolder"
-        src="./assets/graphics_data/scrabble-tile-holder-406774_640.png"
-        alt="tile holder"
-      />
+      <h1>SCRABBLE</h1>
+      <div id="boardWrapper">
+        <img
+          id="board"
+          src="./assets/graphics_data/Scrabble_Board_OneLine.png"
+          alt="scrabble board"
+        />
+        <div class="droppable ui-widget-header">
+          <p>Drop here</p>
+        </div>
+        <div class="droppable ui-widget-header">
+          <p>Drop here</p>
+        </div>
+        <div class="droppable ui-widget-header">
+          <p>Drop here</p>
+        </div>
+      </div>
+      <div id="tileHolderWrapper">
+        <img
+          id="tileHolder"
+          src="./assets/graphics_data/scrabble-tile-holder-406774_640.png"
+          alt="tile holder"
+        />
+        <img
+          class="tiles draggable"
+          src="./assets/scrabble_tiles/Scrabble_Tile_A.jpg"
+          alt="scrabble tile A"
+        />
+        <img
+          class="tiles draggable"
+          src="./assets/scrabble_tiles/Scrabble_Tile_B.jpg"
+          alt="scrabble tile A"
+        />
+      </div>
     </div>
 
-    <div class="droppable ui-widget-header">
-      <p>Drop here</p>
-    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.0/dist/jquery.validate.js"></script>
     <link

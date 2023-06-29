@@ -1,17 +1,41 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif; 
+    font-size: 1.25rem;  
+}
+
+#wrapper {
+    display: block;
+    margin: auto;
+    width: 58%;
+}
+
+#boardWrapper {
+    position:relative;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 75px;
+}
+
+h1, #tileHolder, #board {
+    margin-bottom: 75px;
+}
+
 .tiles {
     width: 60px;
     height: 60px;
 }
 
 .droppable { 
-    position:absolute;
+    position: absolute;
     width: 50px; 
     height: 50px; 
-    padding: 0.5em; 
-    float: left; 
+    padding: 0.15em; 
+    
     margin: 10px; 
-    top: 63px;
-    left: 2px;
+    top: 0;
+    left:0;
 }
 
 #tileHolder {
