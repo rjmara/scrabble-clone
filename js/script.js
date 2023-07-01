@@ -1,3 +1,4 @@
+// edited version of Jesse M. Heines's associative array
 var ScrabbleTiles = [
     { "letter": "A", "value" : 1,  "original-distribution" : 9,  "number-remaining" : 9  },
     { "letter": "B", "value" : 3,  "original-distribution" : 2,  "number-remaining" : 2  },
@@ -28,6 +29,7 @@ var ScrabbleTiles = [
     { "letter": "Blank", "value" : 0,  "original-distribution" : 2,  "number-remaining" : 2  }
 ];
 
+// is called on start and on next round
 startFunction = () => {
     $( ".draggable" ).draggable({
         snap: ".dropArea",
@@ -52,7 +54,7 @@ startFunction = () => {
                 }
             }
 
-            if (dropAreaClass == 6 || dropAreaClass == 8) {
+            if (dropAreaClass == 6 || dropAreaClass == 8 || dropAreaClass == 2 || dropAreaClass == 12) {
                 scoreSpan.text(parseInt(scoreSpan.text()) + (letterValue * 2));
             } else {
                 scoreSpan.text(parseInt(scoreSpan.text()) + letterValue);
@@ -66,6 +68,7 @@ startFunction = () => {
 
 $(document).ready( startFunction );
 
+// creates the board
 var createBoard = () => {
     let boardWrapper = $("#boardWrapper");
     for (let i = 1; i <= 14; i++) {
@@ -79,6 +82,7 @@ var createBoard = () => {
     }
 };
 
+// function that gets a random tile
 let selectedTile;
 let totalTiles = 100; 
 var randomizeLetter = () => {
@@ -91,6 +95,7 @@ var randomizeLetter = () => {
     ScrabbleTiles[randomNum]["number-remaining"]--;
 }
 
+// creates tiles using randomization
 var spawnTiles = () => {
     let imgUrl; 
     let tileHolderWrapper = $("#tileHolderWrapper");
@@ -99,7 +104,7 @@ var spawnTiles = () => {
             break;
         }
         randomizeLetter();
-        imgUrl = "../assets/scrabble_tiles/Scrabble_Tile_" + selectedTile["letter"] + ".jpg";
+        imgUrl = "./assets/scrabble_tiles/Scrabble_Tile_" + selectedTile["letter"] + ".jpg";
         let newTile = $("<div></div>");
         newTile.addClass(selectedTile["letter"]);
         newTile.addClass("tiles");
@@ -111,6 +116,7 @@ var spawnTiles = () => {
     }
 }
 
+// behavior for next button
 var nextRoundButton = () => {
     $(".draggable").remove();
     spawnTiles();
