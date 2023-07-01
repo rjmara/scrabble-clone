@@ -14,15 +14,16 @@
           src="./assets/graphics_data/Scrabble_Board_OneLine.png"
           alt="scrabble board"
         />
-        <div class="droppable ui-widget-header">
-          <p>Drop here</p>
-        </div>
-        <div class="droppable ui-widget-header">
-          <p>Drop here</p>
-        </div>
-        <div class="droppable ui-widget-header">
-          <p>Drop here</p>
-        </div>
+        <div id="firstDropArea" class="0 droppable dropArea"></div>
+      </div>
+      <div id="middleWrapper">
+        <button type="restartButton" onclick="location.reload()">
+          Restart
+        </button>
+        <label id="scoreLabel">Score: <span id="score">0</span></label>
+        <button type="nextRoundButton" onclick="nextRoundButton()">
+          Next Round
+        </button>
       </div>
       <div id="tileHolderWrapper">
         <img
@@ -30,16 +31,7 @@
           src="./assets/graphics_data/scrabble-tile-holder-406774_640.png"
           alt="tile holder"
         />
-        <img
-          class="tiles draggable"
-          src="./assets/scrabble_tiles/Scrabble_Tile_A.jpg"
-          alt="scrabble tile A"
-        />
-        <img
-          class="tiles draggable"
-          src="./assets/scrabble_tiles/Scrabble_Tile_B.jpg"
-          alt="scrabble tile A"
-        />
+        <div></div>
       </div>
     </div>
 

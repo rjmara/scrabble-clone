@@ -5,16 +5,14 @@ body {
 
 #wrapper {
     display: block;
-    margin: auto;
-    width: 58%;
 }
 
-#boardWrapper {
-    position:relative;
+img {
+    margin: auto;
+    resize: none; 
 }
 
 h1 {
-    text-align: center;
     margin-top: 75px;
 }
 
@@ -22,23 +20,51 @@ h1, #tileHolder, #board {
     margin-bottom: 75px;
 }
 
-.tiles {
-    width: 60px;
-    height: 60px;
+#boardWrapper {
+    position: relative;
+    /*
+    margin: 0 auto; 
+    text-align: center;
+    */
 }
 
-.droppable { 
+.dropArea {
     position: absolute;
-    width: 50px; 
-    height: 50px; 
-    padding: 0.15em; 
-    
-    margin: 10px; 
-    top: 0;
-    left:0;
+    width: 65px; 
+    height: 65px; 
+    /*margin: 5px; */
+    top: 5px;
+    left: 5px;
+}
+
+#middleWrapper {
+    display: flex;
+}
+
+button, #scoreLabel {
+    margin: 50px;
+}
+
+button {
+    width: 100px;
+    height: 75px;
+}
+
+#tileHolderWrapper {
+    position: relative;
+    margin: 0;
+    width: 800px;
 }
 
 #tileHolder {
     height: 100px;
     width: 800px;
+}
+
+.tiles {
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    top: 0;
+    left: 0;
 }
